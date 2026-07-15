@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './index.css'
 import dwamLogo from './assets/dwamlogo.png'
 import gardnlogo from './assets/gardnlogo.png'
-import { Wordmark } from '/Wordmark'
+import CurtLabsLogo from './assets/CurtLabsLogoSVG.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +33,7 @@ function App() {
 function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) {
   return (
     <>
-      <Wordmark />
+      <img src={CurtLabsLogo} alt='Curt Labs logo' className='w-[60vw] md:w-[15vw] ml-5 mt-1' />
       <div className="ticks"></div>
       <section id="spacer"></section>
 
@@ -111,7 +111,7 @@ function DwamProject({ onNavigate }) {
 
   return (
     <>
-      <Wordmark onNavigate={onNavigate} />
+      <img src={CurtLabsLogo} alt='Curt Labs logo' className='w-[80vw] md:w-[20vw] ml-5 mt-1' />
       <button type="button" className='bg-green-500 hover:bg-green-600 text-white rounded-lg px-[8vw] py-[2vw] md:px-[6vw] md:py-[1vw] mt-6 inline-block ml-5' onClick={() => onNavigate('home')}>Back to Home</button>
       <div className='text-center rounded-4xl shadow bg-purple-50 px-5 py-5 md:px-10 md:py-10 mt-6'>
         <div className="flex justify-center">
@@ -130,7 +130,7 @@ function DwamProject({ onNavigate }) {
 function GardnProject({ onNavigate }) {
   return (
     <>
-      <Wordmark onNavigate={onNavigate} />
+      <img src={CurtLabsLogo} alt='Curt Labs logo' className='w-[80vw] md:w-[20vw] ml-5 mt-1' />
       <button type="button" className='bg-green-500 hover:bg-green-600 text-white rounded-lg px-[8vw] py-[2vw] md:px-[6vw] md:py-[1vw] mt-6 inline-block ml-5' onClick={() => onNavigate('home')}>Back to Home</button>
       <div className='text-center rounded-4xl shadow bg-purple-50 px-5 py-5 md:px-10 md:py-10 mt-6'>
         <div className="flex justify-center">
