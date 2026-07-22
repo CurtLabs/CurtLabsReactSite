@@ -36,7 +36,7 @@ function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) 
     <>
       <SvgOutlineDefs />
       <section>
-        <RoundDiv className='m-3 bg-linear-to-b from-[#525252] to-[#1B1B1B]'>
+        <RoundDiv className='m-3 md:m-10 bg-linear-to-b from-[#525252] to-[#1B1B1B]'>
           <div className='flex justify-center'>
             <img src={CurtLabsLogo} alt='Curt Labs logo' className='mx-auto md:mx-0 w-[60vw] md:w-[15vw] mt-1 md:ml-5' />
           </div>
@@ -54,7 +54,7 @@ function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) 
       </section>
 
       <section>
-        <RoundDiv className='m-3 bg-linear-to-b from-[#1A1A1A] to-[#808080]'>
+        <RoundDiv className='m-3 md:m-10 bg-linear-to-b from-[#1A1A1A] to-[#808080]'>
           <HeaderText>
             My Work
           </HeaderText>
@@ -74,7 +74,7 @@ function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) 
       </section>
 
       <section>
-        <RoundDiv className='m-3 bg-linear-to-b from-[#828282] to-[#333333]'>
+        <RoundDiv className='m-3 md:m-10 bg-linear-to-b from-[#828282] to-[#333333]'>
           <HeaderText>
               Questions
           </HeaderText>

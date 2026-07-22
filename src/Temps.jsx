@@ -1,6 +1,6 @@
 export function RoundDiv({ className = '', children }) {
     return (
-        <div className={`rounded-[20px] shadow px-5 py-5 md:px-10 md:py-10 mt-8 mb-8 ${className}`}>
+        <div className={`rounded-[20px] shadow px-5 py-5 md:px-10 md:py-10 mt-8 mb-8 md:mt-16 md:mb-16 ${className}`}>
             {children}
         </div>
     )
