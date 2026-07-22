@@ -1,34 +1,28 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './index.css'
 import dwamLogo from './assets/dwamlogo.png'
 import gardnlogo from './assets/gardnlogo.png'
 import CurtLabsLogo from './assets/CurtLabsLogoSVG.svg'
-import {RoundDiv, HeaderText, SvgOutlineDefs, DescText} from './Temps'
+import { RoundDiv, HeaderText, SvgOutlineDefs, DescText } from './Temps'
+import ParticleCanvas from './ParticleCanvas'
 
 function App() {
   const [count, setCount] = useState(0)
   const [buttonClicked, setButtonClicked] = useState(false)
   const [scene, setScene] = useState('home')
 
-  if (scene === 'home') {
-    return (
-      <Home
-        onNavigate={setScene}
-        count={count}
-        setCount={setCount}
-        buttonClicked={buttonClicked}
-        setButtonClicked={setButtonClicked}
-      />
-    )
-  }
-  if (scene === 'dwam') {
-    return <DwamProject onNavigate={setScene} />
-  }
-  if (scene === 'gardn') {
-    return <GardnProject onNavigate={setScene} />
-  }
-
-  return null
+  return (
+    <div className="relative min-h-screen">
+      <ParticleCanvas />
+      <div className="relative z-10">
+        {scene === 'home' && (
+          <Home onNavigate={setScene} count={count} setCount={setCount} buttonClicked={buttonClicked} setButtonClicked={setButtonClicked} />
+        )}
+        {scene === 'dwam' && <DwamProject onNavigate={setScene} />}
+        {scene === 'gardn' && <GardnProject onNavigate={setScene} />}
+      </div>
+    </div>
+  )
 }
 
 function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) {
