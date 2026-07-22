@@ -34,8 +34,8 @@ function ParticleCanvas() {
       update() {
         this.x += this.speedX
         this.y += this.speedY
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1
+        if (this.x < -20 || this.x > canvas.width + 20) this.speedX *= -1
+        if (this.y < -20 || this.y > canvas.height + 20) this.speedY *= -1
       }
       draw() {
         ctx.beginPath()
@@ -62,9 +62,9 @@ function ParticleCanvas() {
           const dx = particles[a].x - particles[b].x
           const dy = particles[a].y - particles[b].y
           const distance = Math.sqrt(dx * dx + dy * dy)
-          if (distance < 120) {
+          if (distance < 200) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(0, 210, 19, ${1 - distance / 120})`
+            ctx.strokeStyle = `rgba(0, 210, 19, ${1 - distance / 200})`
             ctx.lineWidth = 0.5
             ctx.moveTo(particles[a].x, particles[a].y)
             ctx.lineTo(particles[b].x, particles[b].y)
