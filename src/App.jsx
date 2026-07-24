@@ -59,7 +59,6 @@ function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) 
             <svg className="w-[70vw] md:w-[28vw] cursor-pointer transform transition duration-200 hover:-translate-y-2 hover:brightness-90" viewBox="0 0 600 200" onClick={() => onNavigate('dwam')} xmlns="http://www.w3.org/2000/svg">
               <image href={dwamLogo} width="100%" height="100%" preserveAspectRatio="xMidYMid meet" filter="url(#logo-outline)" />
             </svg>
-
             <svg className="w-[70vw] md:w-[28vw] cursor-pointer transform transition duration-200 hover:-translate-y-2 hover:brightness-90" viewBox="0 0 600 200" onClick={() => onNavigate('gardn')} xmlns="http://www.w3.org/2000/svg">
               <image href={gardnlogo} width="100%" height="100%" preserveAspectRatio="xMidYMid meet" filter="url(#logo-outline)" />
             </svg>
@@ -72,13 +71,18 @@ function Home({ onNavigate, count, setCount, buttonClicked, setButtonClicked }) 
           <HeaderText>
               Questions
           </HeaderText>
-          <h2 className='text-[10vw] md:text-[2vw] mb-5 text-white'></h2>
           <DescText>How do I contact you?</DescText>
           <DescText className='px-10'>You can reach me at <span className='text-green-600'><strong>curt@curtlabs.net</strong></span>, I will typically see your email within 5 business days.</DescText>
           <DescText>Your projects are so amazing are you for hire?</DescText>
           <DescText className='px-10'>No.</DescText>
           <DescText>Are you working on any projects currently?</DescText>
           <DescText className='px-10'>Of course, I always have a project in the works.</DescText>
+          <DescText>Favorite game?</DescText>
+          <DescText className='px-10'>Old School RuneScape</DescText>
+          <DescText>Favorite color?</DescText>
+          <DescText className='px-10'>#00ccff</DescText>
+          <DescText>Favorite programming language?</DescText>
+          <DescText className='px-10'>ASM, even though I'm not good at it, it's gotta be the coolest.</DescText>
         </RoundDiv>
       </section>
     </>
